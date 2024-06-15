@@ -1,0 +1,12 @@
+﻿@model Meetingİnfo
+<h1 class="h4">@ViewBag.selamlama @ViewData["user"]</h1>
+<h2>toplntıya katıl</h2>
+<div class="card my-2">
+   <ul class="list-group list-group-flush">
+       <li class="list-group-item">@Model.Location</li>
+        <li class="list-group-item">@Model.Date tarihınde</li>
+        <li class="list-group-item">@Model.NumberOfPeople kişi katılacaktır</li>
+       
+   </ul>
+ </div>
+<a class="btn btn-sm btn-outline-primary" asp-controller="Meeting" asp-action="Apply">katıl </a>

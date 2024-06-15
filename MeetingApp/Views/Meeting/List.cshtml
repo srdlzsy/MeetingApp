@@ -1,0 +1,36 @@
+﻿@model List<Userİnfo>
+<h1 class="h4">kayıt listeleme</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ad</th>
+            <th>katılım durumu</th>
+        </tr>
+    </thead>
+    
+        <tbody>
+            @{ int a=0;}
+        @foreach (var i in Model)
+        {
+            var durum = i.wiilattend == true ? "evet" : "hayır";
+            var clasname = i.wiilattend == true ? "table-succes" : "table-danger";
+            if (i.wiilattend==true)
+            {
+                a = a + 1;
+            }
+
+            <tr class="@clasname">
+                <td>@i.Name</td>
+                <td>@durum</td>
+        
+                <td><a class="btn btn-sm btn-primary" href="/Meeting/Detays/@i.Id">detay</a></td>
+            </tr>
+
+        }
+        </tbody>
+    }
+
+</table>
+<p>@a kişi katılıyor
+</p>

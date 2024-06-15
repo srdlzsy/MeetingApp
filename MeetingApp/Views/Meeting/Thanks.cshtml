@@ -1,0 +1,15 @@
+﻿@model Userİnfo
+<h1 class="h4">basburu durumu</h1>
+@if (Model.wiilattend == true)
+{
+    <p>toplantıya @ViewBag.UserCount katılıyor</p>
+
+    <a asp-controller="Meeting" asp-action="List" class="btn btn-sm btn-outline-primary" >katılanları listele</a>
+    
+}
+else{
+    <p>@Model.Name katılmıyor</p>
+    <a asp-controller="Meeting" asp-action="Apply"  class="btn btn-sm btn-outline-primary" >basvuru</a>
+}
+
+
